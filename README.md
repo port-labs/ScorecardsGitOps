@@ -16,5 +16,5 @@ For blueprint you wish to manage the scorecards using this method, create a file
 Each file needs to be an array with all of the scorecards you wish to have on the blueprint.
 
 ## Notes
-1. If you wish to change the location of the scorecards folder in your directory, you will need to update the workflow in the relevant locations (The `paths` provided at the start, and the route listed in row 32 of the workflow).
+1. If you wish to change the location of the scorecards folder in your directory, you will need to update the workflow in the relevant locations ( [here](https://github.com/port-labs/ScorecardsGitOps/blob/3dacc04fad03024b91e1702d24e6a5b9fff41b4d/scorecards.yaml#L6), and [here](https://github.com/port-labs/ScorecardsGitOps/blob/3dacc04fad03024b91e1702d24e6a5b9fff41b4d/scorecards.yaml#L32)).
 2. This method is using a GitOps approach, which means that the files will act as the source of truth for your Scorecards configurations. Whenever you update the file, it will override the scorecards that already exist in Port, so make sure you create/update scorecards from the repository to not lose your progress.
