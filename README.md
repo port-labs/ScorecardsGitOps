@@ -11,7 +11,7 @@ This repository serves as an example on how you can control your scorecards in P
 
 ## Using the workflow
 The workflow is listening for push events on files inside the scorecards folder, and will attempt to parse the files inside and send them to Port.
-For blueprint you wish to manage the scorecards using this method, create a file named `blueprintIdentifier.json` file in that folder (where blueprintIdentifier needs to be equal to the blueprint identifier in Port).
+For blueprint you wish to manage the scorecards using this method, create a file named `blueprintIdentifier.json` file in that folder (where `blueprintIdentifier` needs to be equal to the blueprint identifier in Port).
 Each file needs to be an array with all of the scorecards you wish to have on the blueprint.
 
 ## Notes
