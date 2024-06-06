@@ -1,41 +1,55 @@
-[
+[{
+  "identifier": "docs",
+  "title": "Quality",
+  "levels": [
     {
-        "identifier": "productionReadiness",
-        "title": "Production Readiness",
-        "levels": [
-            {
-                "color": "paleBlue",
-                "title": "Basic"
-            },
-            {
-                "color": "bronze",
-                "title": "Bronze"
-            },
-            {
-                "color": "silver",
-                "title": "Silver"
-            },
-            {
-                "color": "gold",
-                "title": "Gold"
-            }
-        ],
-        "rules": [
-            {
-                "identifier": "hasTeam",
-                "title": "Has Team",
-                "description": "how to fix",
-                "level": "Bronze",
-                "query": {
-                    "combinator": "and",
-                    "conditions": [
-                        {
-                            "property": "$team",
-                            "operator": "isNotEmpty"
-                        }
-                    ]
-                }
-            }
-        ]
+      "color": "paleBlue",
+      "title": "Basic"
+    },
+    {
+      "color": "bronze",
+      "title": "Bronze"
+    },
+    {
+      "color": "silver",
+      "title": "Silver"
+    },
+    {
+      "color": "gold",
+      "title": "Gold"
     }
+  ],
+  "rules": [
+    {
+      "identifier": "has-readme",
+      "title": "Has README",
+      "description": "The service includes a README file, providing essential documentation and instructions for developers and stakeholders, promoting better understanding, collaboration, and effective onboarding to the service's codebase and functionality.",
+      "level": "Bronze",
+      "query": {
+        "combinator": "and",
+        "conditions": [
+          {
+            "operator": "isNotEmpty",
+            "property": "readme"
+          }
+        ]
+      }
+    },
+    {
+      "identifier": "has-resource-def",
+      "title": "Has resource definition",
+      "description": "The service has a link to a resource definition",
+      "level": "Gold",
+      "query": {
+        "combinator": "and",
+        "conditions": [
+          {
+            "operator": "isNotEmpty",
+            "property": "resource_definitions"
+          }
+        ]
+      }
+    }
+  ]
+}
 ]
