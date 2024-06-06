@@ -1,0 +1,41 @@
+[
+    {
+        "identifier": "productionReadiness",
+        "title": "Production Readiness",
+        "levels": [
+            {
+                "color": "paleBlue",
+                "title": "Basic"
+            },
+            {
+                "color": "bronze",
+                "title": "Bronze"
+            },
+            {
+                "color": "silver",
+                "title": "Silver"
+            },
+            {
+                "color": "gold",
+                "title": "Gold"
+            }
+        ],
+        "rules": [
+            {
+                "identifier": "hasTeam",
+                "title": "Has Team",
+                "description": "how to fix",
+                "level": "Bronze",
+                "query": {
+                    "combinator": "and",
+                    "conditions": [
+                        {
+                            "property": "$team",
+                            "operator": "isNotEmpty"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]
